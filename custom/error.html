@@ -4,17 +4,17 @@
 {% if status_code == 403 %}
 {{ super() }}
 <p>
-    <strong>It looks like you need to request an account!</strong> If you are a first time user, you can Sign Up from <a href="https://sandbox.dev.dea.ga.gov.au/hub/login">the login page</a>
+    <strong>It looks like you need to request an account!</strong> If you are a first time user, you can Sign Up from <a href="https://{{ domain_name }}/hub/login">the login page</a>
 </p>
 {% elif status_code == 401 %}
 {{ super() }}
 <p>
-    Please <a href="https://sandbox.dev.dea.ga.gov.au/hub/logout">login</a> again!!
+    Please <a href="https://{{ domain_name }}/hub/logout">login</a> again!!
 </p>
 {% elif status_code == 400 %}
 {{ super() }}
 <p>
-    Please login again from <a href="https://sandbox.dev.dea.ga.gov.au/hub/home">the home page</a>.
+    Please login again from <a href="https://{{ domain_name }}/hub/home">the home page</a>.
 </p>
 {% elif status_code == 500 %}
 {{ super() }}
