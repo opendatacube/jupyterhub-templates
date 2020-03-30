@@ -9,7 +9,7 @@
 {% elif status_code == 401 %}
 {{ super() }}
 <p>
-    Please <a href="https://{{ domain_name }}/hub/logout">login</a> again!
+    Please <a href="https://{{ domain_name }}/hub/logout">login</a> again.
 </p>
 {% elif status_code == 400 %}
 {{ super() }}
