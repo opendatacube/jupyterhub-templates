@@ -1,29 +1,53 @@
 {% extends "templates/error.html" %}
 
-{% block h1_error %}
 {% if status_code == 403 %}
+{% block h1_error %}
+{{ super() }}
+
+{% endblock h1_error %}
+{% block error_details %}
 {{ super() }}
 <p>
-    <strong>It looks like you need to request an account!</strong> If you are a first time user, you can Sign Up from <a href="https://{{ domain_name }}/hub/login">the login page</a>
+    <strong>It looks like you need to request an account!</strong> If you are a first time user, you can Sign Up from <a href="https://{{ domain_name }}/hub/login">the login page</a>.
 </p>
+{% endblock error_details %}
+
 {% elif status_code == 401 %}
+{% block h1_error %}
 {{ super() }}
+
+{% endblock h1_error %}
+{% block error_details %}
 <p>
-    Please <a href="https://{{ domain_name }}/hub/logout">login</a> again!
+    Session has expired: Please <a href="https://{{ domain_name }}/hub/logout">login</a> again.
 </p>
+{% endblock error_details %}
+
 {% elif status_code == 400 %}
+{% block h1_error %}
+{{ super() }}
+
+{% endblock h1_error %}
+{% block error_details %}
 {{ super() }}
 <p>
     Please login again from <a href="https://{{ domain_name }}/hub/home">the home page</a>.
 </p>
+
+{% endblock error_details %}
+
 {% elif status_code == 500 %}
+{% block h1_error %}
 {{ super() }}
-<p>
-    Oh no! Something is wrong on our end. If this problem persists, please join our #opendatacube slack channel or
-    <a href="earth.observations@ga.gov.au">email us</a>.
-</p>
-{% else %}
-{{ super() }}
-{% endif %}
 
 {% endblock h1_error %}
+{% block error_details %}
+
+{{ super() }}
+<p>
+    Oh no! Something is wrong on our end. If this problem persists, please join our <a href="https://opendatacube.slack.com">#opendatacube slack channel</a> or
+    <a href="earth.observations@ga.gov.au">email us</a>.
+</p>
+{% endblock error_details %}
+
+{% endif %}

@@ -6,12 +6,23 @@ This repository contains templates used for JupyterHub.
 Note: By default, JupyterHub already has these files in `/usr/local/share/jupyterhub/templates`
 
 # Customised Errors
+The `custom/error.html` is extending https://github.com/jupyterhub/jupyterhub/blob/master/share/jupyterhub/templates/error.html
+
+the Structure of the template is
+```python
+  {% block h1_error %}
+  {% endblock h1_error %}
+
+  {% block error_detail %}
+  {% endblock error_detail %}
+```
+use `{{ super() }}` to inherit original message, or leave it out to completely override the `{% block %}`.
 
 ## 403
 
 ## 401
 ### template code snippet 
-```html
+```python
 {% elif status_code == 401 %}
 {{ super() }}
 <p>
