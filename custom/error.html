@@ -6,7 +6,7 @@
 
 {% endblock h1_error %}
 
-{% block error_details %}
+{% block error_detail %}
 {% if status_code == 403 %}
 {{ super() }}
 <p>
@@ -28,4 +28,4 @@
     <a href="earth.observations@ga.gov.au">email us</a>.
 </p>
 {% endif %}
-{% endblock error_details %}
+{% endblock error_detail %}
