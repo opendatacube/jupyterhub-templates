@@ -1,0 +1,7 @@
+{% extends "templates/page.html" %}
+
+{% block logo %}
+<span id="jupyterhub-logo" class="pull-left">
+    <a href="{{logo_url or base_url}}"><img src='{{base_url}}dea-logo-inline.svg' alt='JupyterHub' class='jpy-logo' title='Home'/></a>
+</span>
+{% endblock %}
