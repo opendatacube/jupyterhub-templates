@@ -24,9 +24,8 @@ use `{{ super() }}` to inherit original message, or leave it out to completely o
 ### template code snippet 
 ```python
 {% elif status_code == 401 %}
-{{ super() }}
 <p>
-    Please <a href="https://{{ domain_name }}/hub/logout">login</a> again!
+    Session has expired: Please <a href="https://{{ domain_name }}/hub/logout">login</a> again.
 </p>
 ```
 
@@ -34,12 +33,7 @@ use `{{ super() }}` to inherit original message, or leave it out to completely o
 ```html
 <div class="error">
   <h1>401 : Unauthorized</h1>
-  <p> 
-    Please <a href="https://sandbox.dev.dea.ga.gov.au/hub/logout">login</a> again!
-  </p> 
-  <p>
-    Session is expired!
-  </p>
+  <p>Session has expired: Please <a href="https://sandbox.dev.dea.ga.gov.au/hub/logout">login</a> again.</p>
 </div>
 ```
 
