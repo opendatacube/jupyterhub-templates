@@ -18,6 +18,19 @@ the Structure of the template is
 ```
 use `{{ super() }}` to inherit original message, or leave it out to completely override the `{% block %}`.
 
+## 404
+### template code snippet 
+
+### Sandbox error html render
+```html
+<div class="error">
+  <h1>
+    404 : Not Found
+  </h1>
+<p>Jupyter has lots of moons, but this is not one...</p>
+</div>
+```
+
 ## 403
 
 ## 401
