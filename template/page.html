@@ -1,6 +1,9 @@
 {% extends "templates/page.html" %}
 
 {% block title %}{{ html_title }}{% endblock %}
+{% block favicon %}
+<link rel="icon" href="https://{{ favicon_domain }}/website/images/dea-favicon.ico" type="image/x-icon">
+{% endblock %}
 
 {% block meta %}
 <style>
