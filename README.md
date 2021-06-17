@@ -1,3 +1,5 @@
+**This repository is no longer used. The JupyterHub templates for the DEA Sandbox are now maintained in [GeoscienceAustralia/dea-sandbox-templates](https://github.com/GeoscienceAustralia/dea-sandbox-templates).**
+
 # JupyterHub Templates
 
 This repository contains templates used for JupyterHub.
